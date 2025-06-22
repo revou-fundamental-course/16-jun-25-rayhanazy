@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Keliling Segitiga</title>
+  <link rel="stylesheet" href="css/keliling.css">
+</head>
+<body>
+
+  <header>Keliling Segitiga</header>
+
+  <main>
+    <section>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Triangle.SVG.svg" alt="Segitiga">
+            <figcaption>Gambar segitiga dengan alas dan tinggi</figcaption>
+        </figure>
+
+      <div class="rumus">
+        <p><strong>Rumus Keliling Segitiga:</strong><br>K = a + b + c</p>
+        <p><strong>Keterangan:</strong><br>K = Keliling, a/b/c = sisi segitiga</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Hitung Keliling Segitiga</h2>
+      <form onsubmit="hitungKeliling(event)">
+        <input type="number" id="a" placeholder="Masukkan sisi a" required>
+        <input type="number" id="b" placeholder="Masukkan sisi b" required>
+        <input type="number" id="c" placeholder="Masukkan sisi c" required>
+        <button type="submit">Hitung</button>
+      </form>
+
+      <div id="output" class="hasil" aria-live="polite"></div>
+
+      <div class="nav">
+        <a href="luas.html">⬅ Kembali ke Halaman Luas Segitiga</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kalkulator Segitiga | Teknik Informatika
+  </footer>
+
+  <script>
+    function hitungKeliling(e) {
+      e.preventDefault();
+      const a = parseFloat(document.getElementById("a").value);
+      const b = parseFloat(document.getElementById("b").value);
+      const c = parseFloat(document.getElementById("c").value);
+      const output = document.getElementById("output");
+
+      if (a > 0 && b > 0 && c > 0) {
+        const keliling = a + b + c;
+        output.innerHTML = `K = ${a} + ${b} + ${c} = ${keliling.toFixed(2)}`;
+      } else {
+        output.innerHTML = "Masukkan semua sisi dengan angka yang valid!";
+      }
+    }
+  </script>
+
+</body>
+</html>

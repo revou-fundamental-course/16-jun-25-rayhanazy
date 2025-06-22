@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Luas Segitiga</title>
+  <link rel="stylesheet" href="css/luas.css">
+</head>
+<body>
+
+  <header>
+    Luas Segitiga
+  </header>
+
+  <main>
+    <section>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Triangle.SVG.svg" alt="Segitiga">
+        <figcaption>Gambar segitiga dengan alas dan tinggi</figcaption>
+      </figure>
+
+      <div class="rumus">
+        <p><strong>Rumus Luas Segitiga:</strong><br>
+        <code>L = 1/2 × a × t</code></p>
+        <p><strong>Keterangan:</strong><br>
+        L = Luas<br>
+        a = Alas<br>
+        t = Tinggi</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Hitung Luas Segitiga</h2>
+      <form onsubmit="hitungLuas(event)">
+        <input type="number" id="alas" placeholder="Masukkan panjang alas (a)" required>
+        <input type="number" id="tinggi" placeholder="Masukkan tinggi (t)" required>
+        <button type="submit">Hitung</button>
+      </form>
+
+      <div id="output" class="hasil" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kalkulator Segitiga | Teknik Informatika
+  </footer>
+
+  <script>
+    function hitungLuas(e) {
+      e.preventDefault();
+      const a = parseFloat(document.getElementById("alas").value);
+      const t = parseFloat(document.getElementById("tinggi").value);
+      const output = document.getElementById("output");
+
+      if (isNaN(a) || isNaN(t) || a <= 0 || t <= 0) {
+        output.innerHTML = "Masukkan nilai alas dan tinggi yang valid.";
+        return;
+      }
+
+      const luas = 0.5 * a * t;
+      output.innerHTML = `
+        Diketahui:<br>
+        a = ${a}<br>
+        t = ${t}<br><br>
+        L = 1/2 × ${a} × ${t}<br>
+        L = ${luas.toFixed(2)}
+      `;
+    }
+  </script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@ function hitungLuas(e) {
 
   if (a > 0 && t > 0) {
     const luas = 0.5 * a * t;
-    tampilkanPopup(`L = 1/2 × ${a} × ${t} = <strong>${luas.toFixed(2)}</strong>`);
+    tampilkanPopup(`L = 1/2 × ${a} × ${t} = <strong>${luas.toFixed()}</strong>`);
   } else {
     tampilkanPopup("Masukkan angka yang valid!");
   }

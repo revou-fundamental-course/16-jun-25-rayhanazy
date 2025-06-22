@@ -7,7 +7,7 @@ function hitungKeliling(e) {
 
   if (a > 0 && b > 0 && c > 0) {
     const hasil = a + b + c;
-    tampilkanPopup(`K = ${a} + ${b} + ${c} = <strong>${hasil.toFixed(2)}</strong>`);
+    tampilkanPopup(`K = ${a} + ${b} + ${c} = <strong>${hasil.toFixed()}</strong>`);
   } else {
     tampilkanPopup("Masukkan semua sisi dengan angka yang valid!");
   }

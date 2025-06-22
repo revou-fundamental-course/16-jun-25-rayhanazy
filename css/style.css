@@ -1,4 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   background: linear-gradient(to bottom, #cce5ff, #ffffff);

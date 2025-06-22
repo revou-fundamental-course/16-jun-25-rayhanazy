@@ -1,3 +1,4 @@
+// Fungsi untuk menghitung luas
 function hitungLuas(e) {
   e.preventDefault();
   const a = parseFloat(document.getElementById("alas").value);
@@ -15,6 +16,7 @@ function hitungLuas(e) {
   document.getElementById("tinggi").value = "";
 }
 
+// Fungsi untuk menampilkan popup dan suara
 function tampilkanPopup(teks) {
   const audio = new Audio("assets/success.mp3");
   audio.play();

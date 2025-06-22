@@ -1,3 +1,4 @@
+// Fungsi untuk menghitung keliling
 function hitungKeliling(e) {
   e.preventDefault();
   const a = parseFloat(document.getElementById("a").value);
@@ -17,6 +18,7 @@ function hitungKeliling(e) {
   document.getElementById("c").value = "";
 }
 
+// Fungsi untuk menampilkan popup dan suara
 function tampilkanPopup(teks) {
   const audio = new Audio("assets/success.mp3");
   audio.play();

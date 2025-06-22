@@ -4,61 +4,55 @@
   <meta charset="UTF-8">
   <title>Keliling Segitiga</title>
   <link rel="stylesheet" href="css/keliling.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>Keliling Segitiga</header>
+    <header data-aos="fade-down">
+  <a href="index.html" class="back-button">⬅ Kembali</a>
+  Keliling Segitiga
+</header>
 
   <main>
     <section>
-        <figure>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Triangle.SVG.svg" alt="Segitiga">
-            <figcaption>Gambar segitiga dengan alas dan tinggi</figcaption>
+        <figure data-aos="zoom-in">
+            <img src="assets/keliling.png" alt="Segitiga">
+            <figcaption>Gambar segitiga dengan keliling</figcaption>
         </figure>
 
-      <div class="rumus">
+      <div class="rumus" data-aos="fade-right">
         <p><strong>Rumus Keliling Segitiga:</strong><br>K = a + b + c</p>
-        <p><strong>Keterangan:</strong><br>K = Keliling, a/b/c = sisi segitiga</p>
+        <p><strong>Keterangan:</strong><br>K = Keliling <br> a/b/c = sisi segitiga</p>
       </div>
     </section>
 
     <section>
-      <h2>Hitung Keliling Segitiga</h2>
-      <form onsubmit="hitungKeliling(event)">
+      <h2 data-aos="fade-up">Hitung Keliling Segitiga</h2>
+      <form onsubmit="hitungKeliling(event)" data-aos="fade-up" data-aos-delay="200">
         <input type="number" id="a" placeholder="Masukkan sisi a" required>
         <input type="number" id="b" placeholder="Masukkan sisi b" required>
         <input type="number" id="c" placeholder="Masukkan sisi c" required>
         <button type="submit">Hitung</button>
       </form>
 
-      <div id="output" class="hasil" aria-live="polite"></div>
-
-      <div class="nav">
-        <a href="luas.html">⬅ Kembali ke Halaman Luas Segitiga</a>
+      <div class="nav" data-aos="fade-left" data-aos-delay="400">
+        <a href="index.html">⬅ Kembali ke Halaman Utama</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    &copy; 2025 Kalkulator Segitiga | Teknik Informatika
-  </footer>
+  <!-- Modal Output -->
+<div id="popupModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="tutupPopup()">&times;</span>
+    <p id="popupText"></p>
+  </div>
+</div>
 
-  <script>
-    function hitungKeliling(e) {
-      e.preventDefault();
-      const a = parseFloat(document.getElementById("a").value);
-      const b = parseFloat(document.getElementById("b").value);
-      const c = parseFloat(document.getElementById("c").value);
-      const output = document.getElementById("output");
-
-      if (a > 0 && b > 0 && c > 0) {
-        const keliling = a + b + c;
-        output.innerHTML = `K = ${a} + ${b} + ${c} = ${keliling.toFixed(2)}`;
-      } else {
-        output.innerHTML = "Masukkan semua sisi dengan angka yang valid!";
-      }
-    }
-  </script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="js/keliling.js"></script>
 </body>
 </html>

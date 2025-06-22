@@ -1,30 +1,71 @@
 body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-    }
-header {
-  background-color: #28a745;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
 }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(11, 196, 11); /* sesuaikan dengan warna tema */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Tombol Kembali di Header */
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: rgb(11, 196, 11);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(11, 196, 11);
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgb(11, 196, 11);
+  color: #fff;
+}
+
+
 main {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
 }
+
 section {
   margin-bottom: 30px;
   text-align: center;
 }
+
+figure img {
+  width: 200px;
+  margin: 10px 0;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #555;
+}
+
 .rumus {
   text-align: left;
   font-size: 16px;
   margin-top: 20px;
 }
+
 input[type="number"] {
   width: 80%;
   padding: 10px;
@@ -32,8 +73,9 @@ input[type="number"] {
   display: block;
   font-size: 16px;
 }
+
 button {
-  background-color: #28a745;
+  background-color: rgb(11, 196, 11);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -41,14 +83,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-.hasil {
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 18px;
-  background-color: #e0ffe0;
-  padding: 15px;
-  border-radius: 5px;
+
+button:hover {
+  background-color: rgb(1, 126, 1);
 }
+
 footer {
   text-align: center;
   padding: 15px;
@@ -56,11 +95,67 @@ footer {
   font-size: 14px;
   color: #888;
 }
+
+.hasil {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 5px;
+}
+
 .nav {
   margin-top: 20px;
 }
+
 .nav a {
-  color: #28a745;
+  color: rgb(11, 196, 11);
   text-decoration: none;
   font-size: 14px;
+}
+
+/* Popup Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px 30px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

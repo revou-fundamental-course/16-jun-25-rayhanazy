@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda | Kalkulator Segitiga</title>
+
+  <!-- Link ke CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+<body>
+
+  <main>
+    <section class="intro">
+      <h1 data-aos="fade-down">Hitung Luas & Keliling Segitiga</h1>
+      <p data-aos="fade-up" data-aos-delay="100">Gunakan alat ini untuk menghitung luas dan keliling segitiga secara mudah dan cepat.</p>
+
+      <lottie-player
+    src="assets/pyramid.json"
+    background="transparent"
+    speed="0.8"
+    style="width: 700px; height: 400px; margin: 0 auto;"
+    loop
+    autoplay
+    data-aos="zoom-in"
+    data-aos-delay="300">
+    </lottie-player>
+
+      <div class="button-group">
+        <a href="luas.html" data-aos="fade-right" data-aos-delay="500">Hitung Luas</a>
+        <a href="keliling.html" data-aos="fade-left" data-aos-delay="600">Hitung Keliling</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>

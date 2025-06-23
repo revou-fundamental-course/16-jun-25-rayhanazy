@@ -1,9 +1,12 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
 html {
   scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,7 +18,10 @@ body {
 
 .intro {
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 20px 160px 20px;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .intro h1 {
@@ -49,10 +55,68 @@ body {
   color: white;
   font-weight: bold;
   font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   border-radius: 8px;
   transition: 0.3s;
+  flex: 1 1 40%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button-group a:hover {
   background-color: #0056b3;
+}
+
+/* Untuk tablet (maksimal lebar 768px) */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 24px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .intro img {
+    width: 150px;
+  }
+
+  .button-group a {
+    padding: 12px 20px;
+    font-size: 14px;
+    flex: 1 1 100%;
+  }
+}
+
+/* Untuk smartphone (maksimal lebar 480px) */
+@media (max-width: 480px) {
+  .intro {
+    padding: 50px 20px 160px 20px;
+  }
+
+  .intro h1 {
+    font-size: 20px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .intro img {
+    width: 120px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .button-group a {
+    padding: 10px 15px;
+    font-size: 13px;
+    width: 100%;
+    max-width: none;
+  }
 }

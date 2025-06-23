@@ -63,6 +63,11 @@ section {
   text-align: center;
 }
 
+section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
 figure img {
   width: 200px;
   margin: 10px 0;
@@ -76,6 +81,9 @@ figcaption {
 .rumus {
   text-align: left;
   font-size: 16px;
+}
+
+.rumus p {
   margin-top: 20px;
 }
 

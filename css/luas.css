@@ -20,7 +20,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #007bff; /* sesuaikan dengan warna tema */
+  background-color: #007bff; 
   color: white;
   padding: 20px;
   text-align: center;

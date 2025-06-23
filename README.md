@@ -17,4 +17,4 @@ Lottie (animasi ilustratif)
 
 ## 📸 Preview
 
-<a href="https://revou-fundamental-course.github.io/16-jun-25-rayhanazy/"
+<a href="https://revou-fundamental-course.github.io/16-jun-25-rayhanazy/" target="_blank">**Visit Now** 🚀</a>

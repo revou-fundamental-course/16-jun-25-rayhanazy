@@ -2,7 +2,7 @@
 
 Website sederhana untuk menghitung luas dan keliling segitiga secara interaktif menggunakan HTML, CSS, dan JavaScript.
 
-# 🚀 Teknologi yang Digunakan
+## 🚀 Teknologi yang Digunakan
 HTML5 + CSS3 (Responsive Design)
 
 JavaScript DOM

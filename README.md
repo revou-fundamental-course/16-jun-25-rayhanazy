@@ -14,3 +14,7 @@ Google Fonts
 SweetAlert2 (popup hasil)
 
 Lottie (animasi ilustratif)
+
+## 📸 Preview
+
+<a href="https://revou-fundamental-course.github.io/16-jun-25-rayhanazy/"
